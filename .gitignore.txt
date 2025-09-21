@@ -1,0 +1,17 @@
+# Arquivos e pastas do Quartus Prime a serem ignorados
+
+# Arquivos temporários e de log
+*.bak
+*.log
+*.rpt
+*.srf
+*.csv
+*.txt
+*.cmp
+
+# Pastas de saída da compilação e do projeto
+output_files/
+db/
+incremental_db/
+quartus_temp/
+simulation/
