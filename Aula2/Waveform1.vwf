@@ -1,13 +1,13 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Exe2 -c Exe2 --vector_source="C:/Users/Y8kne/Documents/Lab CD/Aula 2/Waveform.vwf" --testbench_file="C:/Users/Y8kne/Documents/Lab CD/Aula 2/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Exe2 -c Exe2 --vector_source="C:/Users/Y8kne/Documents/Lab CD/Aula 2/Waveform.vwf" --testbench_file="C:/Users/Y8kne/Documents/Lab CD/Aula 2/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Y8kne/Documents/Lab CD/Aula 2/simulation/qsim/" Exe2 -c Exe2</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Y8kne/Documents/Lab CD/Aula 2/simulation/qsim/" Exe2 -c Exe2</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Exe2 -c Exe2 --vector_source="C:/Users/User/Documents/LabCd/Aula2/Waveform1.vwf" --testbench_file="C:/Users/User/Documents/LabCd/Aula2/simulation/qsim/Waveform1.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Exe2 -c Exe2 --vector_source="C:/Users/User/Documents/LabCd/Aula2/Waveform1.vwf" --testbench_file="C:/Users/User/Documents/LabCd/Aula2/simulation/qsim/Waveform1.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/User/Documents/LabCd/Aula2/simulation/qsim/" Exe2 -c Exe2</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/User/Documents/LabCd/Aula2/simulation/qsim/" Exe2 -c Exe2</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work Exe2.vo
-vlog -work work Waveform.vwf.vt
-vsim  -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.DECODIFICADOR_vlg_vec_tst
+vlog -work work Waveform1.vwf.vt
+vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.DECODIFICADOR_vlg_vec_tst
 vcd file -direction Exe2.msim.vcd
 vcd add -internal DECODIFICADOR_vlg_vec_tst/*
 vcd add -internal DECODIFICADOR_vlg_vec_tst/i1/*
@@ -20,13 +20,11 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vlog -work work Exe2.vo
-vlog -work work Waveform.vwf.vt
+vlog -work work Waveform1.vwf.vt
 vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.DECODIFICADOR_vlg_vec_tst
 vcd file -direction Exe2.msim.vcd
 vcd add -internal DECODIFICADOR_vlg_vec_tst/*
@@ -40,8 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -150,11 +146,6 @@ SIGNAL("LadoG")
 	PARENT = "";
 }
 
-GROUP("Dislay")
-{
-	MEMBERS = "LadoA", "LadoB", "LadoC", "LadoD", "LadoE", "LadoF", "LadoG";
-}
-
 SIGNAL("w")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -193,6 +184,11 @@ SIGNAL("z")
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
 	PARENT = "";
+}
+
+GROUP("D")
+{
+	MEMBERS = "LadoA", "LadoB", "LadoC", "LadoD", "LadoE", "LadoF", "LadoG";
 }
 
 TRANSITION_LIST("LadoA")
@@ -352,7 +348,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Dislay";
+	CHANNEL = "D";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
