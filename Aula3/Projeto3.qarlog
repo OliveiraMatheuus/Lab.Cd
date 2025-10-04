@@ -1,0 +1,20 @@
+Quartus Prime Archive log --	C:/Users/User/Documents/LabCd/Aula3/Projeto3.qarlog
+
+Archive:	C:/Users/User/Documents/LabCd/Aula3/Projeto3.qar
+Date:		Tue Sep 30 11:54:28 2025
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/User/Documents/LabCd/Aula3/ContadorA.bdf
+C:/Users/User/Documents/LabCd/Aula3/ContadorS.bdf
+C:/Users/User/Documents/LabCd/Aula3/DECODIFICADOR.bdf
+C:/Users/User/Documents/LabCd/Aula3/Exe1.bdf
+C:/Users/User/Documents/LabCd/Aula3/Exe1.qpf
+C:/Users/User/Documents/LabCd/Aula3/Exe1.qsf
+C:/Users/User/Documents/LabCd/Aula3/Exe2.bdf
+C:/Users/User/Documents/LabCd/Aula3/output_files/Waveform.vwf
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 9 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
