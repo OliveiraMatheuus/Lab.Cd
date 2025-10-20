@@ -22,7 +22,7 @@ https://fpgasoftware.intel.com/eula.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect -16 320 152 336)
+	(rect -56 320 112 336)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "ClockManual" (rect 5 0 68 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -51,6 +51,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -96 424 -40 448))
 )
 (pin
 	(output)
@@ -273,11 +274,6 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (connector
-	(text "<<__$DEF_ALIAS3784>>" (rect 173 312 291 329)(font "Intel Clear" )(invisible))
-	(pt 264 328)
-	(pt 152 328)
-)
-(connector
 	(text "clk" (rect 240 328 254 345)(font "Intel Clear" ))
 	(pt 216 344)
 	(pt 264 344)
@@ -375,4 +371,9 @@ https://fpgasoftware.intel.com/eula.
 	(text "clk" (rect 148 400 162 417)(font "Intel Clear" ))
 	(pt 128 416)
 	(pt 176 416)
+)
+(connector
+	(text "<<__$DEF_ALIAS3784>>" (rect 133 312 251 329)(font "Intel Clear" )(invisible))
+	(pt 112 328)
+	(pt 264 328)
 )
