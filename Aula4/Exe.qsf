@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY Decodificador_Frequencia
+set_global_assignment -name TOP_LEVEL_ENTITY Projeto1
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:41:29  SEPTEMBER 30, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -55,9 +55,8 @@ set_location_assignment PIN_W22 -to LadoD
 set_location_assignment PIN_W25 -to LadoE
 set_location_assignment PIN_U23 -to LadoF
 set_location_assignment PIN_U24 -to LadoG
-set_location_assignment PIN_Y17 -to CLK
-set_location_assignment PIN_Y16 -to Inversor
-set_location_assignment PIN_AG25 -to Reset
+set_location_assignment PIN_R24 -to CLK
+set_location_assignment PIN_AB28 -to Inversor
 set_location_assignment PIN_Y2 -to ClkFPGA
 set_global_assignment -name BDF_FILE Divisor_Frequencia.bdf
 set_global_assignment -name BDF_FILE DECODIFICADOR.bdf
@@ -73,6 +72,19 @@ set_global_assignment -name BDF_FILE Decodificador_Frequencia.bdf
 set_global_assignment -name BDF_FILE Contador_Automatico.bdf
 set_global_assignment -name BDF_FILE Decodificador_frequencia_simples.bdf
 set_global_assignment -name BDF_FILE Projeto3.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name BDF_FILE teste.bdf
+set_location_assignment PIN_Y23 -to CLR
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform1.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
