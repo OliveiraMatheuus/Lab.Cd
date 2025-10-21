@@ -19,14 +19,14 @@
 #
 # Quartus Prime
 # Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-# Date created = 08:41:29  September 30, 2025
+# Date created = 11:08:14  September 23, 2025
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		Exe_assignment_defaults.qdf
+#		Exe1_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -39,40 +39,43 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY Projeto3
+set_global_assignment -name TOP_LEVEL_ENTITY Exe1
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:41:29  SEPTEMBER 30, 2025"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:08:14  SEPTEMBER 23, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_location_assignment PIN_Y2 -to CLK
-set_global_assignment -name BDF_FILE Divisor_Frequencia.bdf
-set_global_assignment -name BDF_FILE DECODIFICADOR.bdf
-set_global_assignment -name BDF_FILE Debounce.bdf
-set_global_assignment -name BDF_FILE Contador_inversor.bdf
-set_global_assignment -name BDF_FILE Projeto2.bdf
-set_global_assignment -name BDF_FILE Projeto1.bdf
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name BDF_FILE Decodificador_Frequencia.bdf
-set_global_assignment -name BDF_FILE Contador_Automatico.bdf
-set_global_assignment -name BDF_FILE Decodificador_frequencia_simples.bdf
-set_global_assignment -name BDF_FILE Projeto3.bdf
-set_location_assignment PIN_AB21 -to CLR
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
-set_global_assignment -name BDF_FILE teste.bdf
-set_location_assignment PIN_U23 -to s0
-set_location_assignment PIN_W21 -to s1
-set_location_assignment PIN_W22 -to s2
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_AA25 -to LadoA
+set_location_assignment PIN_AA26 -to LadoB
+set_location_assignment PIN_Y25 -to LadoC
+set_location_assignment PIN_W26 -to LadoD
+set_location_assignment PIN_Y26 -to LadoE
+set_location_assignment PIN_W27 -to LadoF
+set_location_assignment PIN_W28 -to LadoG
+set_location_assignment PIN_R24 -to Reset
+set_location_assignment PIN_Y23 -to Clock
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name BDF_FILE DECODIFICADOR.bdf
+set_global_assignment -name BDF_FILE ContadorS.bdf
+set_global_assignment -name BDF_FILE ContadorA.bdf
+set_global_assignment -name BDF_FILE Exe1.bdf
+set_global_assignment -name BDF_FILE Exe2.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
